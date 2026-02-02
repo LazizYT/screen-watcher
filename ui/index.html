@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Screen-Watcher UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>SCREEN-WATCHER</h1>
+      <div class="status" id="status">STATUS: —</div>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Controls</h2>
+        <div class="row">
+          <button id="btnStart">Start</button>
+          <button id="btnStop" class="danger">Stop</button>
+        </div>
+        <div class="row">
+          <button id="btnViewOnly" class="ghost">Toggle View-only</button>
+        </div>
+
+        <div class="kv">
+          <div>View-only</div><div id="viewOnly">—</div>
+          <div>FPS</div><div id="fps">—</div>
+          <div>Last action</div><div id="lastAction">—</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Screen Preview</h2>
+        <div class="preview">
+          <img id="screen" alt="screen preview" />
+        </div>
+        <div class="hint">Если пусто — агент не запущен или захват экрана заблокирован.</div>
+      </div>
+
+      <div class="card logs">
+        <h2>Logs</h2>
+        <pre id="logs"></pre>
+      </div>
+    </section>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
